@@ -157,4 +157,16 @@ public class MyLinkedList <T> {
 		tempNode.setValue(value);
 	}
 	
+	//prints list from head to tail
+	public void print() {
+		Node currNode = head;
+		for(int i = 0; i < this.size() - 1; i++) {
+			System.out.print(currNode.getValue() + ", ");
+			currNode = currNode.getNext();
+		}
+		if (currNode != null) {
+			System.out.println(currNode.getValue());
+		}
+	}
+	
 }
